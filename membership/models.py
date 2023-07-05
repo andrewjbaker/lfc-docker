@@ -44,7 +44,39 @@ class UserManager(BaseUserManager):
     
 
 class User(AbstractBaseUser, PermissionsMixin):
-    
+    """A class to define a user for the membership system (i.e. a member)
+    :param AbstractBaseUser: An abstract base class on which to build a custom user model
+    :type AbstractBaseUser: `AbstractBaseUser` class
+    :param PermissionsMixin: Class which adds the fields and methods necessary to support the Group 
+    and Permission models using the ModelBackend
+    :type PermissionsMixin: `PermissionsMixin` class
+    :param email: The email address of the user and the primary key for the member account
+    :type email: `str`
+    :param membership_number: A randomly generated eight digit integer for the member id
+    :type membership_number: `int`
+    :param first_name: The member's first name
+    :type first_name: `str`
+    :param last_name: The member's last name
+    :type last_name: `str`
+    :param telephone: The contact telephone number for the member
+    :type telephone: `str`
+    :param address1: The first line of the member's address
+    :type address1: `str`
+    :param address2: The second line of the member's address
+    :type address2: `str`, optional
+    :param city: The city in which the member resides
+    :type city: `str`
+    :param postcode: The postcode of the member's address
+    :type postcode: `str`
+    :param is_staff: Determines whether the account belongs to a staff member, defaults to False
+    :type is_staff: `bool`
+    :param is_active: Determines whether the account is active, defaults to False
+    :type is_active: `bool`
+    :param is_superuser: Determines whether the account belongs to an administrator, defaults to False
+    :type is_superuser: `bool`
+
+    """
+
     email = models.EmailField(unique=True, max_length=255, blank=False)
     membership_number = models.PositiveIntegerField('membership number', unique=True, blank=False)
     first_name = models.CharField('first name', max_length=50, blank=False)
@@ -71,12 +103,28 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     def __str__(self):
+        """Returns a string representation of a `User` account
+        :param self: An object of the User class i.e. a member account
+        :type self: `User`
+        :return: The string representation of the member account i.e. their membership number
+        :rtype: `int`
+        """
         return str(self.membership_number)
     
     def address(self):
+        """Returns a string representation of the member's address
+        :param self: An object of the User class i.e. a member account
+        :type self: `User`
+        :return: A concatenated output of the address including both lines, city and postcode
+        :rtype: `str`
+        """
         return f"{self.address1}\n{self.addressline2}\n{self.city}\n{self.postcode}"
     
     def create_membership_number(self):
+        """Creates a unique eight-digit identifier for the member's id and assigns it to the member
+        :param self: An object of the User class i.e. a member account
+        :type self: `User`
+        """
         unique_id = False
 
         # Creates a unique membership id by selecting a random 8 digit integer and checking if it exists
