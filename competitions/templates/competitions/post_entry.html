@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <h3>{{competition.title}}</h3> 
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>  
+    <br />     
+
+    {% if error_message %}
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <p style="text-align:center"><strong>{{error_message}}</strong></p> 
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>    
+    {% elif success_message %}
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <p style="text-align:center"><strong>{{success_message}}</strong></p> 
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div> 
+    {% endif %}
+    
+    <br />
+
+    <div class="row align-items-center">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <a href="{% url 'competitions:competition_page' %}" class="btn btn-danger" style="color:white;">
+                Back to Competitions
+            </a>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <br /> <br />
+
+{% endblock %}

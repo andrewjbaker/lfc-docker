@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+<html>
+    <body>
+        {% block content %}
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <h3>About</h3>
+                </div>
+                <div class="col-md-10">
+                    <p>
+                        Liverpool Football Club is an English football team based in Liverpool, in the north west of
+                        England.  The men's professional team currently plays in the English Premier League, the top 
+                        tier in English football, and plays its home matches at Anfield stadium.  The team is managed
+                        by Jurgen Klopp, a German football manager who has been with the team since 2015.
+                    </p>
+
+                    <p> 
+                        Liverpool FC has a rich history, and regularly features in European knockout competitions held 
+                        by UEFA.  Sadly, the club has also been involved in tragedies, namely the Hillsborough and 
+                        Heysel stadium disasters, where football fans lost their lives.
+                    </p>
+                </div>
+            </div>
+
+            <br /> <br />
+
+            <div class="row align-items-center" style="background-color:snow">
+                <div class="col-md-2">
+                    <img 
+                    src = "{% static 'assets/jurgen.png' %}"
+                    alt = "Jürgen Klopp" 
+                    class = img />
+                </div>
+                
+                <div class="col-md-10">
+                    <br />
+                    <h3>A message from Jürgen Klopp, Liverpool FC Manager</h3>
+                    <br />
+                    
+                    <p>
+                        Hello, Reds!  I hope you are looking forward to the 2023/24 season as much as I am.  The boys will be
+                        back in training very soon, and we have a lot to do - but I'm confident we will be in a strong position
+                        again at the end of the pre-season and ready to fight for every point.
+                    </p>
+                    <p>
+                        Thank you to every one of you for your unfailing support, and we can't wait to bring you even more joy
+                        and happiness as fans of this incredible club with its incredible history.
+                    </p>
+                    <p>
+                        Allez Allez Allez!
+                    </p>
+
+                    <h6>Jürgen</h6>
+                    <br />
+                </div>
+            </div>
+        {% endblock %}
+    </body>
+</html>

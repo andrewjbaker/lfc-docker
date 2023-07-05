@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+<html>
+    <body>
+        {% block content %}
+            <h1 style="color:red"</h1>Register to join our family of LFC members</h1>
+
+            <br />
+
+            {% if error_message %}
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>{{error_message}}</strong></p> 
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>    
+
+            <br />
+            {% endif %}
+
+            <form action="{% url 'membership:registration' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>First name</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="first_name" placeholder="First name" required>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Last name</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="last_name" placeholder="Last name" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Email address</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="email" name="email" placeholder="email@example.com" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Password</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="password" name="password" placeholder="password" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Telephone number</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="telephone" placeholder="07123456789" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Address line 1</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="address1" placeholder="Building/ apartment number, street name" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Address line 2</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="address2" placeholder="Town"> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>City</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="city" placeholder="e.g. Liverpool" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <label><h3>Postcode</h3></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="postcode" placeholder="e.g. L4 0TH" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="submit" value="Create account" />
+                    </div> 
+                </div>
+            </form>
+        {% endblock %}
+        <br /> <br />
+    </body>
+</html>

@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: local('Avenir Next'),
+         url('./fonts/Avenir Next.ttc') format("truetype");
+  }
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Avenir Next';
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    color: gainsboro;
+    font-family: 'Avenir Next';
+    font-size: 40px;
+    font-weight: light;
+    font-style: italic;
+    text-align: center;
+}
+
+h3 {
+    color: red;
+    font-family: 'Avenir Next';
+    font-weight: bolder;
+    text-align: center;
+}
+
+h6 {
+    color: goldenrod;
+    font-family: cursive;
+    font-size: 36px;
+}
+
+ol {
+    color: black;
+    font-family: 'Avenir Next';
+    font-size: medium;
+    line-height: 1.6;
+}
+
+ul {
+    color: black;
+    font-family: 'Avenir Next';
+    font-size: medium;
+    line-height: 1.6;
+}
+
+p {
+    color: black;
+    font-family: 'Avenir Next';
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 200px;
+    width: auto;
+  }
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-family: 'Avenir Next';
+    font-weight: light;
+    font-size: 18px;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %} 
+{% load static %}
+{% csrf_token %}
+
+{% block content %}
+    <h4><a href="/competitions/{{competition.id}}">{{ competition.title }}</a> launched {{ competition.date }}</h4>
+    <br /> <br />
+    <div class = "container">
+    {{ competition.body|safe|linebreaks}} 
+    </div>
+    
+    <br /> 
+    
+    <form action="{% url 'competitions:enter' competition.id %}" method="post"> 
+        {% csrf_token %}
+
+        <div class="form-group row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-danger" style="color:white;" value="Click Here to Enter!" />
+            </div>
+            <div class="col-md-5">
+            </div>
+        </div>
+    </form>
+
+    <br />
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+<html>
+    <body>
+        {% block content %}
+            <h1 style="color:red">Login to your members' area</h1>
+
+            <br />
+
+            {% if error_message %}
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>{{error_message}}</strong></p> 
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>    
+
+                <br />
+            {% endif %}
+
+            <form action="{% url 'membership:authenticate' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <label><h3>Email</h3></label>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <label><h3>Password</h3></label>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="password" name="password" placeholder="Password" required> 
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" value="Login" />
+                    </div> 
+                </div>
+            </form>
+        {% endblock %}
+    </body>
+</html>
