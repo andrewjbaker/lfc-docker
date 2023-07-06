@@ -11,8 +11,7 @@ def member_login(request):
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
-    :return: The overview page for the request, if login was successful, or the 
-    membership/login.html page, if login was unsuccessful
+    :return: The overview page for the request, if login was successful, or the membership/login.html page, if login was unsuccessful
     :rtype: HTTP Response
     """
     if request.user.is_authenticated:
@@ -25,8 +24,7 @@ def register(request):
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
-    :return: The overview page for the request, if registration and login was successful, or the 
-    membership/register.html page, if registration was unsuccessful
+    :return: The overview page for the request, if registration and login was successful, or the membership/register.html page, if registration was unsuccessful
     :rtype: HTTP Response
     """
     if request.user.is_authenticated:
