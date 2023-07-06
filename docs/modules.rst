@@ -1,5 +1,5 @@
 LiverpoolFC
-=======
+============
 
 .. toctree::
    :maxdepth: 4

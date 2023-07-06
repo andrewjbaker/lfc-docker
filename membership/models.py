@@ -48,8 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     :param AbstractBaseUser: An abstract base class on which to build a custom user model
     :type AbstractBaseUser: `AbstractBaseUser` class
-    :param PermissionsMixin: Class which adds the fields and methods necessary to support the Group 
-    and Permission models using the ModelBackend
+    :param PermissionsMixin: Class which adds the fields and methods necessary to support the Group and Permission models using the ModelBackend
     :type PermissionsMixin: `PermissionsMixin` class
     :param email: The email address of the user and the primary key for the member account
     :type email: `str`
