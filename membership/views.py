@@ -7,8 +7,7 @@ User = get_user_model()
 
 # Create your views here.
 def member_login(request):
-    """Returns the overview of a membership if the user successfully logs in, or returns to
-    the login page if the user is not able to be authenticated
+    """Returns the overview of a membership if the user successfully logs in, or returns to the login page if the user is not able to be authenticated
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
@@ -22,8 +21,7 @@ def member_login(request):
         return render(request, 'membership/login.html')
     
 def register(request):
-    """Returns the overview of a membership if the user successfully registers and is authenticated, 
-    or returns to the registration page if the user is not able to be authenticated
+    """Returns the overview of a membership if the user successfully registers and is authenticated, or returns to the registration page if the user is not able to be authenticated
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
@@ -58,8 +56,7 @@ def overview(request):
     )
 
 def authenticate_member(request):
-    """Returns the overview of a membership if the user successfully logs in, or returns to
-    the login page if the email adddress and/or password are incorrect
+    """Returns the overview of a membership if the user successfully logs in, or returns to the login page if the email adddress and/or password are incorrect
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
@@ -82,14 +79,11 @@ def authenticate_member(request):
         )
 
 def registration(request):
-    """Registers a user if their email address does not already exist in the system,
-    logs them in and returns an overview of their membership
+    """Registers a user if their email address does not already exist in the system, logs them in and returns an overview of their membership
     
     :param request: HTTP request initiated by the user
     :type request: HTTP request
-    :return: The overview page if login was successful, the login page if the user 
-    details were not persisted, or the registration page with an error message if an
-    existing User object with an identical email address was identified
+    :return: The overview page if login was successful, the login page if the user details were not persisted, or the registration page with an error message if an existing User object with an identical email address was identified
     :rtype: HTTP Response
     """
     first_name = request.POST.get('first_name')

@@ -36,9 +36,7 @@ def enter(request, competition_id):
     :type request: HTTP request
     :param competition_id: The identifier for the selected competition (primary key, title)
     :type competition_id: str
-    :return: The post_entry.html page with a success message if the user is authenticated and
-    successfully enters, or the membership/login.html page with an error message if the user
-    is not logged in and authenticated
+    :return: The post_entry.html page with a success message if the user is authenticated and successfully enters, or the membership/login.html page with an error message if the user is not logged in and authenticated
     :rtype: HTTP response
     """
     competition = get_object_or_404(Competition, pk=competition_id)
