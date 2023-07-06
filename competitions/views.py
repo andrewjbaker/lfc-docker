@@ -5,6 +5,7 @@ from datetime import datetime
 # Create your views here.
 def competition_page(request):
     """Returns a rendered view of the requested competitions page
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The competition_page.html webpage containing a view of the competitions
@@ -16,6 +17,7 @@ def competition_page(request):
 
 def view_competition(request, competition_id):
     """Returns a rendered view of a page linked to a specific competition
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :param competition_id: The identifier for the selected competition (primary key, title)
@@ -29,6 +31,7 @@ def view_competition(request, competition_id):
 def enter(request, competition_id):
     """Returns a success message if the user successfully enters the competition, or an error
     message asking the user to log in if they are not authenticated
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :param competition_id: The identifier for the selected competition (primary key, title)

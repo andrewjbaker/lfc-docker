@@ -9,6 +9,7 @@ User = get_user_model()
 def member_login(request):
     """Returns the overview of a membership if the user successfully logs in, or returns to
     the login page if the user is not able to be authenticated
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The overview page for the request, if login was successful, or the 
@@ -23,6 +24,7 @@ def member_login(request):
 def register(request):
     """Returns the overview of a membership if the user successfully registers and is authenticated, 
     or returns to the registration page if the user is not able to be authenticated
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The overview page for the request, if registration and login was successful, or the 
@@ -36,6 +38,7 @@ def register(request):
 
 def overview(request):
     """Returns the overview page of a membership
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The membership/overview.html page populated with the member's information
@@ -57,6 +60,7 @@ def overview(request):
 def authenticate_member(request):
     """Returns the overview of a membership if the user successfully logs in, or returns to
     the login page if the email adddress and/or password are incorrect
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The membership overview page for the request, if login was successful
@@ -80,6 +84,7 @@ def authenticate_member(request):
 def registration(request):
     """Registers a user if their email address does not already exist in the system,
     logs them in and returns an overview of their membership
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The overview page if login was successful, the login page if the user 
@@ -128,6 +133,7 @@ def registration(request):
 
 def logout_member(request):
     """Logs the user out of the member system
+    
     :param request: HTTP request initiated by the user
     :type request: HTTP request
     :return: The membership login page

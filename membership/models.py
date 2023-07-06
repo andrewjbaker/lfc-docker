@@ -45,6 +45,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     """A class to define a user for the membership system (i.e. a member)
+    
     :param AbstractBaseUser: An abstract base class on which to build a custom user model
     :type AbstractBaseUser: `AbstractBaseUser` class
     :param PermissionsMixin: Class which adds the fields and methods necessary to support the Group 
@@ -104,6 +105,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         """Returns a string representation of a `User` account
+        
         :param self: An object of the User class i.e. a member account
         :type self: `User`
         :return: The string representation of the member account i.e. their membership number
@@ -113,6 +115,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     def address(self):
         """Returns a string representation of the member's address
+        
         :param self: An object of the User class i.e. a member account
         :type self: `User`
         :return: A concatenated output of the address including both lines, city and postcode
@@ -122,6 +125,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     def create_membership_number(self):
         """Creates a unique eight-digit identifier for the member's id and assigns it to the member
+        
         :param self: An object of the User class i.e. a member account
         :type self: `User`
         """

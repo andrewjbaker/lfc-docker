@@ -21,6 +21,7 @@ class Competition(models.Model):
 
     def __str__(self): 
         """Returns a string representation of the Competition class
+        
         :param self: 
         :type self: `Competition`
         :return: The title of the competition
@@ -48,6 +49,7 @@ class Entry(models.Model):
 
     def get_entry_date_time(self):
         """Returns a string representation of the date and time of the entry
+        
         :param self: 
         :type self: `Entry`
         :return: The date and time of the entry in the format YYYY-MM-DD hh:mm:ss
@@ -57,6 +59,7 @@ class Entry(models.Model):
 
     def __str__(self):
         """Returns a string representation of the Entry class
+        
         :param self: 
         :type self: `Entry`
         :return: A string containing the date and time of the entry, the member id and the competition title
