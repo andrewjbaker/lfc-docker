@@ -46,6 +46,8 @@ workon my_django
 pip install django
 ```
 
+* You must also install Docker from [here](https://www.docker.com) to be able to build and run the image using the Dockerfile contained within the repository.
+
 ## 2. Usage
 The website can be accessed by entering the following in the command line:
 
