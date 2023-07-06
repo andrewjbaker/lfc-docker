@@ -49,10 +49,11 @@ pip install django
 ## 2. Usage
 The website can be accessed by entering the following in the command line:
 
-* Launch the virtual environment using ```workon my_django```
-* 
+* Launch the virtual environment using ```workon my_django```.
+* Build the docker file by navigating to the root directory of the repo and entering ```docker build -t lfc ./```.
+* Run the docker file by issuing the following command: ```docker run -p 8000:8000 lfc```.
 
-The website can be accessed at ```http://127.0.0.1:8000/```.
+The website can now be accessed at ```http://127.0.0.1:8000/```.
 &nbsp;
 
 <img width="1400" alt="Liverpool FC Django project home page" src="https://github.com/andrewjbaker/liverpool-fc-web-project/assets/111700184/c894810a-4939-4cf8-ab34-e148546d0dd0">
